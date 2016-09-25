@@ -4,7 +4,7 @@
 #
 Name     : zenity
 Version  : 3.20.0
-Release  : 1
+Release  : 2
 URL      : https://download.gnome.org/core/3.20/3.20.2/sources/zenity-3.20.0.tar.xz
 Source0  : https://download.gnome.org/core/3.20/3.20.2/sources/zenity-3.20.0.tar.xz
 Summary  : No detailed summary available
@@ -24,6 +24,7 @@ BuildRequires : libxml2-python
 BuildRequires : perl(XML::Parser)
 BuildRequires : pkgconfig(gtk+-3.0)
 BuildRequires : pkgconfig(libnotify)
+BuildRequires : pkgconfig(webkit2gtk-4.0)
 BuildRequires : pkgconfig(x11)
 
 %description
