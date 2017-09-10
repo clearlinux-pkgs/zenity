@@ -4,24 +4,24 @@
 #
 Name     : zenity
 Version  : 3.24.0
-Release  : 5
+Release  : 6
 URL      : https://download.gnome.org/sources/zenity/3.24/zenity-3.24.0.tar.xz
 Source0  : https://download.gnome.org/sources/zenity/3.24/zenity-3.24.0.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
-License  : GPL-2.0 LGPL-2.0
+License  : LGPL-2.0
 Requires: zenity-bin
-Requires: zenity-data
-Requires: zenity-locales
 Requires: zenity-doc
+Requires: zenity-locales
+Requires: zenity-data
 BuildRequires : gettext
 BuildRequires : gnome-doc-utils
 BuildRequires : gnome-doc-utils-dev
-BuildRequires : gnome-doc-utils-python
 BuildRequires : itstool
 BuildRequires : libxml2-dev
 BuildRequires : libxml2-python
 BuildRequires : perl(XML::Parser)
+BuildRequires : pkgconfig(glib-2.0)
 BuildRequires : pkgconfig(gtk+-3.0)
 BuildRequires : pkgconfig(libnotify)
 BuildRequires : pkgconfig(webkit2gtk-4.0)
@@ -72,8 +72,11 @@ locales components for the zenity package.
 %setup -q -n zenity-3.24.0
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1490638429
+export SOURCE_DATE_EPOCH=1505005939
 %configure --disable-static --with-gtk=3.0
 make V=1  %{?_smp_mflags}
 
@@ -81,11 +84,11 @@ make V=1  %{?_smp_mflags}
 export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1490638429
+export SOURCE_DATE_EPOCH=1505005939
 rm -rf %{buildroot}
 %make_install
 %find_lang zenity
@@ -100,6 +103,25 @@ rm -rf %{buildroot}
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/zenity/clothes/gnome-tshirt.png
+/usr/share/zenity/clothes/hawaii-shirt.png
+/usr/share/zenity/clothes/monk.png
+/usr/share/zenity/clothes/sunglasses.png
+/usr/share/zenity/clothes/surfboard.png
+/usr/share/zenity/zenity-calendar.png
+/usr/share/zenity/zenity-entry.png
+/usr/share/zenity/zenity-file.png
+/usr/share/zenity/zenity-list.png
+/usr/share/zenity/zenity-notification.png
+/usr/share/zenity/zenity-progress.png
+/usr/share/zenity/zenity-scale.png
+/usr/share/zenity/zenity-text.png
+/usr/share/zenity/zenity.png
+/usr/share/zenity/zenity.ui
+
+%files doc
+%defattr(-,root,root,-)
+%doc /usr/share/man/man1/*
 /usr/share/help/C/zenity/calendar.page
 /usr/share/help/C/zenity/color-selection.page
 /usr/share/help/C/zenity/entry.page
@@ -870,25 +892,6 @@ rm -rf %{buildroot}
 /usr/share/help/zh_CN/zenity/text.page
 /usr/share/help/zh_CN/zenity/usage.page
 /usr/share/help/zh_CN/zenity/warning.page
-/usr/share/zenity/clothes/gnome-tshirt.png
-/usr/share/zenity/clothes/hawaii-shirt.png
-/usr/share/zenity/clothes/monk.png
-/usr/share/zenity/clothes/sunglasses.png
-/usr/share/zenity/clothes/surfboard.png
-/usr/share/zenity/zenity-calendar.png
-/usr/share/zenity/zenity-entry.png
-/usr/share/zenity/zenity-file.png
-/usr/share/zenity/zenity-list.png
-/usr/share/zenity/zenity-notification.png
-/usr/share/zenity/zenity-progress.png
-/usr/share/zenity/zenity-scale.png
-/usr/share/zenity/zenity-text.png
-/usr/share/zenity/zenity.png
-/usr/share/zenity/zenity.ui
-
-%files doc
-%defattr(-,root,root,-)
-%doc /usr/share/man/man1/*
 
 %files locales -f zenity.lang
 %defattr(-,root,root,-)
