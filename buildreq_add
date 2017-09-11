@@ -1,8 +1,5 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
-gnome-doc-utils
-gnome-doc-utils-dev
-gnome-doc-utils
 libxml2-python
 itstool
 libxml2-dev
