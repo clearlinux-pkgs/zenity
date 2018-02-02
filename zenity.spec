@@ -4,7 +4,7 @@
 #
 Name     : zenity
 Version  : 3.26.0
-Release  : 9
+Release  : 10
 URL      : https://download.gnome.org/sources/zenity/3.26/zenity-3.26.0.tar.xz
 Source0  : https://download.gnome.org/sources/zenity/3.26/zenity-3.26.0.tar.xz
 Summary  : No detailed summary available
