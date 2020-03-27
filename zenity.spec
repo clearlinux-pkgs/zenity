@@ -4,7 +4,7 @@
 #
 Name     : zenity
 Version  : 3.32.0
-Release  : 16
+Release  : 17
 URL      : https://download.gnome.org/sources/zenity/3.32/zenity-3.32.0.tar.xz
 Source0  : https://download.gnome.org/sources/zenity/3.32/zenity-3.32.0.tar.xz
 Summary  : Display graphical dialog boxes from shell scripts
