@@ -4,10 +4,10 @@
 #
 Name     : zenity
 Version  : 3.32.0
-Release  : 17
+Release  : 18
 URL      : https://download.gnome.org/sources/zenity/3.32/zenity-3.32.0.tar.xz
 Source0  : https://download.gnome.org/sources/zenity/3.32/zenity-3.32.0.tar.xz
-Summary  : Display graphical dialog boxes from shell scripts
+Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.0
 Requires: zenity-bin = %{version}-%{release}
@@ -88,35 +88,37 @@ man components for the zenity package.
 
 %prep
 %setup -q -n zenity-3.32.0
+cd %{_builddir}/zenity-3.32.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1557027081
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1586219911
+export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
 export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %configure --disable-static --with-gtk=3.0
 make  %{?_smp_mflags}
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1557027081
+export SOURCE_DATE_EPOCH=1586219911
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/zenity
-cp COPYING %{buildroot}/usr/share/package-licenses/zenity/COPYING
+cp %{_builddir}/zenity-3.32.0/COPYING %{buildroot}/usr/share/package-licenses/zenity/bf50bac24e7ec325dbb09c6b6c4dcc88a7d79e8f
 %make_install
 %find_lang zenity
 
@@ -979,7 +981,7 @@ cp COPYING %{buildroot}/usr/share/package-licenses/zenity/COPYING
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/zenity/COPYING
+/usr/share/package-licenses/zenity/bf50bac24e7ec325dbb09c6b6c4dcc88a7d79e8f
 
 %files man
 %defattr(0644,root,root,0755)
