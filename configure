@@ -1,1 +1,2 @@
---with-gtk=3.0
+-Dlibnotify=true
+-Dwebkitgtk=true

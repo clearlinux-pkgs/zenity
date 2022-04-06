@@ -1,0 +1,5 @@
+3.42.0
+libnotify-dev
+pkgconfig(libnotify)
+pkgconfig(webkit2gtk-4.0)
+webkitgtk-dev
