@@ -4,7 +4,7 @@
 #
 Name     : zenity
 Version  : 3.42.1
-Release  : 23
+Release  : 24
 URL      : https://download.gnome.org/sources/zenity/3.42/zenity-3.42.1.tar.xz
 Source0  : https://download.gnome.org/sources/zenity/3.42/zenity-3.42.1.tar.xz
 Summary  : No detailed summary available
