@@ -1,5 +1,4 @@
-3.42.1
-libnotify-dev
-pkgconfig(libnotify)
-pkgconfig(webkit2gtk-4.0)
-webkitgtk-dev
+3.92.0
+help2man
+pkgconfig(libadwaita-1)
+pkgconfig(webkitgtk-6.0)

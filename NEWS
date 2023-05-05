@@ -1,3 +1,65 @@
+Zenity 3.92.0
+  3rd alpha release of the upcoming zenity 4.x, based on libadwaita/gtk4.
+    - progress: don't update responses that aren't there (see: !25 and
+      https://bugzilla.redhat.com/show_bug.cgi?id=2177287) (Adam Williamson)
+    - Set dialog 'heading', not 'title' for the --title option (see: !26) (Adam
+      Williamson)
+    - tree: fix handling of multi-row stdin input (#54) (Adam Williamson)
+    - tree-column-view: don't steal children (see: !28) (Adam Williamson)
+    - Port to webkitgtk 6.0 (Adam Williamson)
+    - webkit: Fix leak by removing unnecessary ref sink (Logan Rathbone)
+    - option: Add non-fatal deprecation warning for --confirm-overwrite (#55)
+      (Logan Rathbone)
+    - help: Fix typo in Basque help translation (Andre Klapper)
+    - Translation updates:
+        Andika Triwidada (id)
+        Asier Sarasua Garmendia (eu)
+        Balázs Úr (hu)
+        Ekaterine Papava (ka)
+        Piotr Drąg (pl)
+        Sergej A (ru)
+        Yuri Chornoivan (uk)
+
+Zenity 3.91.0
+    - tree: Port to GtkColumnView (Logan Rathbone)
+    - desktop file: Remove spurious translation comment (Logan Rathbone)
+    - i18n: rename POTFILES to POTFILES.in (Piotr Drąg)
+    - help: Fix invalid markup in German help translation (Andre Klapper)
+    - help: Freedesktop.org spec fixes (Anders Jonsson)
+    - Translation updates:
+        Anders Jonsson (sv)
+        Yuri Chornoivan (uk)
+        Jürgen Benvenuti (de)
+        Ekaterine Papava (ka)
+        Kukuh Syafaat (id)
+        Martin (sl)
+        Aurimas Černius (lt)
+        Aleksandr Melman (ru)
+        Sergej A (ru)
+        Sabri Ünal (tr)
+        Anders Jonsson (sv)
+
+Zenity 3.90.0
+    - Initial alpha release based on libadwaita and GTK4 (Logan Rathbone)
+
+Zenity 3.44.0
+    - scale: set a page increment so mouse wheel can be used on widget (Hg)
+    - build: Use GNOME module post_install() (Matt Turner)
+    - docs: Fix incorrect markup (Andre Klapper)
+    - build: Replace deprecated functions (Logan Rathbone)
+    - Translation updates:
+        Alexander Shopov (bg)
+        Jiri Grönroos (fi)
+        Nart Tlisha (ab)
+        Sabri Ünal (tr)
+        Sergej A (ru)
+
+Zenity 3.43.0
+    - Documentation updates (Logan Rathbone)
+    - Bump WebkitGTK dependency to API 4.1, for GNOME 43 (Logan Rathbone)
+    - Translation updates:
+        Zurab Kargareteli (ka)
+
 Zenity 3.42.1
     - scale: Make OK button default (allows pressing Enter to accept selected
       value) (hydrargyrum)
