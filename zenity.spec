@@ -7,7 +7,7 @@
 #
 Name     : zenity
 Version  : 4.0.5
-Release  : 31
+Release  : 32
 URL      : https://download.gnome.org/sources/zenity/4.0/zenity-4.0.5.tar.xz
 Source0  : https://download.gnome.org/sources/zenity/4.0/zenity-4.0.5.tar.xz
 Summary  : No detailed summary available
